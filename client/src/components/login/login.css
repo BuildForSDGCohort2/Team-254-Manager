@@ -1,0 +1,51 @@
+.login{
+    width: 30%;
+    border: 1px solid #ccc;
+    height: 400px;
+    margin: 54px auto;
+    border-radius: 4px;  
+}
+.avatar{
+    border:1px solid #ccc;
+    width: 70px;
+    height:70px;
+    border-radius: 100%;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.fa-user{
+    font-size: 27px;
+    margin-top: 15px;
+}
+label{
+    margin-left: 15px; 
+}
+.password{
+    width: 90%;
+    height: 40px;
+    margin-left: 15px;
+}
+.email{
+    width: 90%;
+    height: 40px;
+    margin-left: 15px; 
+}
+.Login{
+    width: 90%;
+    height: 40px;
+    margin-left: 15px; 
+}
+.Forgot{
+    margin-left: 14px;
+}
+#email_err{
+    text-align: center;
+    color: brown;
+}
+#pass_err{
+    text-align: center;
+    color: brown;
+}
+#loading{
+    margin-left: 20px;
+}
