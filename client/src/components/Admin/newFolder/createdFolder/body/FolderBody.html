@@ -1,0 +1,231 @@
+<link rel="stylesheet" href="client/src/Components/Admin/newFolder/createdFolder/filetree.css">
+<link rel="stylesheet" href="client/src/Components/Admin/newFolder/createdFolder/folder.css">
+<div id="hovers">hovers</div>
+<div id="sideNav">
+  <h4 class="heads">
+    
+      <span id="title"></span>
+      
+    <span id="myBtn" class="btn button4 fa fa-file"></span>
+    <span id="folderBtn" class="btn button4 fa fa-folder"></span>
+    <span id="download" class="btn button4 fa fa-download"></span>
+    <span id="upload_btn" class="btn button4 fa fa-upload"></span>
+    <input type="hidden" style="width:100%;" id="path">
+    <input type="hidden" style="width:100%;" id="Main_path">
+   
+  </h4>
+  <hr>
+  <div id="Bodx"> </div>
+</div>
+<section id="section">
+  
+<div class="table">
+  
+<h4 id="headd" class="head">
+  
+  <span id='File_name'></span>
+  
+  <button id="commit"  class="btn btn-success fa fa-level-up" disabled>Commit</button>
+  <span class="btn button3 fa fa-trash-o"></span>
+  
+  <span id="edit" class="btn button3 fa fa-edit"></span>
+  
+  <span id="button" class="btn button3 fa fa-download"></span>
+  <input type="hidden" id="selected_file">
+</h4>
+
+ 
+<figure>
+  <code  class="tabled">
+    
+    <div contenteditable="false" id="contents"></div>
+    <!--drag and dropp start-->
+    <div id="drop">
+      <br>
+      <div class="container" style="width:700px;" align="center">
+      <h3 class="text-center">drag and drop Files here</h3>
+      <div class="progress"id="bar">
+      <div class="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="progressBar"></div>
+    </div>
+      <br>
+        <div class="file_drag_area">
+        Drop files here
+        
+        </div>
+         
+        </div>
+        <br>
+        </div>
+    </div>
+    <!--drag and drop end-->
+  
+  </code>
+
+</figure>
+</div>
+</section>
+
+<!---START OF TO folder-->
+
+
+<div class="modal" id="folderModal">
+  <div class="modal-content">
+      <div class="modal-header">
+         
+          <button type="button" class="close closeFolder" >&times;</button>
+          create Folder/directory
+      </div>
+      <div class="modal-body">
+        <label>Folder name</label>
+        <input type="text" id="folderName" class="form-control" placeholder="folderName">
+        <br>
+         <button id="createFolder" class="btn btn-primary">Create</button>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- END OF TOGGLE  folder--> 
+
+
+
+
+<!---START OF TOGGLE-->
+
+
+<div class="modal" id="myModal">
+      <div class="modal-content">
+          <div class="modal-header">
+             
+              <button type="button" class="close closeFile" >&times;</button>
+              Create File with extentions e.g(.txt,.php,.js ...)
+          </div>
+          <div class="modal-body">
+              <label>File name</label>
+             <input type="text" id="fileName" class="form-control" placeholder="fileName">
+             <br>
+              <button id="createFile" class="btn btn-primary">Create</button>
+      </div>
+  </div>
+</div>
+</div>
+
+
+<!-- END OF TOGGLE--> 
+<!---START OF upload TOOGLE-->
+
+
+<div class="modal" id="upload_Modal">
+  <div class="modal-content">
+      <div class="modal-header">
+        
+          <button type="button" class="close closeUpload" >&times;</button>
+          <button id="select" class="btn closi">Select</button> <button id="drops" class="btn closi">drag & drop</button>
+         <br>
+      </div>
+      <div class="modal-body">
+
+         <div id="drag">
+            <div class="container" style="width:700px;" align="center">
+            <h3 class="text-center">drag and drop Files here</h3>
+            <div class="progress" id="bar">
+            <div class="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="progressBars"></div>
+          </div>
+            <br>
+              <div class="file_drag_area">
+              Drop files here
+              
+              </div>
+               
+              </div>
+              
+              
+
+
+
+         </div>
+
+         <div id="selects">
+                <center><h4>Select File</h4></center>
+                <center>
+                <form method="post" enctype="multipart/form-data" id="upload_form">
+                  <label>File</label>
+                <input id="select_file"  type="file" name="file[]" multiple />
+                <br>
+                <button type="submit" id="upload" class="btn btn-primary">upload</button>
+                <br>
+                <br>
+                <div class="progress" id="bard">
+                  <div class="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="progressBard"></div>
+                </div>
+                </form>
+              </center>
+                
+         </div>
+
+         
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- END OF upload TOGGLE--> 
+
+<!---START OF downloadTOGGLE-->
+
+
+<div class="modal" id="downloaadModal">
+  <div class="modal-content">
+      <div class="modal-header">
+          
+        <button type="button" class="close download" >&times;</button>
+        <center><h4><span id="folderNamee"></span></h4></center>
+         <input type="hidden" id="selectedFolder">
+        
+      </div>
+      <div class="modal-body">
+        <center>
+          
+         <progress id="progress" value="0"></progress>
+         <br>
+          <span id="progress-text"></span>
+          <br>
+         <span id="remaining"></span> 
+         <br>
+         <button id="downloadZip" class="btn btn-info">download</button>
+          
+         <a id="anchor" class="btn btn-success" download="archivet.zip">save file</a>
+        </center>
+         
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- END OF download TOGGLE--> 
+
+
+
+<div class="modal" id="mySeatings">
+  <div class="modal-content">
+      <div class="modal-header">
+         
+          <button type="button" class="close seatings" >&times;</button>
+          seatings
+      </div>
+      <div class="modal-body">
+        seatings
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- END OF TOGGLE--> 
+
+
+<script src="client/src/Components/Admin/newFolder/createdFolder/body/folder.js"></script>
+<script src="client/src/Components/Admin/newFolder/createdFolder/body/download.js"></script>

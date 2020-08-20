@@ -1,0 +1,64 @@
+.headNav{
+    border-bottom:1px solid cadetblue;
+    height: 40px;
+    
+}
+.items{
+    margin: 0x auto;
+    width: 50%;
+    margin-left: 25%;
+    cursor: pointer;
+}
+.fa{
+    margin-left: 5px;
+}
+.headNav span{
+    margin-left: 40px;
+}
+#FolderBox{
+    border:1px solid #ccc;
+    width: 70%;
+    height: 40px;
+    margin:10px auto;
+    border-radius: 4px;
+}
+#FolderBody{
+    border:1px solid #ccc;
+    width: 70%;
+    height: 400px;
+    margin:10px auto;
+    border-radius: 4px; 
+}
+#FolderBody .head{
+    background-color: #EDD5;
+    height: 60px;
+}
+.folder{
+    width: 100%;
+    height: 40px;
+    margin: 1px solid #ccc;
+}
+.badge{
+    background-color: white;
+    color: cadetblue;
+}
+.fa-plus{
+    float: right;
+    margin-right: 20px;
+}
+.fa-trash-o{
+    float: right;
+    margin-top: 20px;
+}
+#contaiN{
+    padding-top:0px;
+    float: left;
+    background-color:inherit;
+    margin: 10px 10px;
+    position: relative;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 5px;
+}
